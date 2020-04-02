@@ -24,4 +24,14 @@ CreateUserDto = __decorate([
     graphql_1.InputType()
 ], CreateUserDto);
 exports.default = CreateUserDto;
+let DeleteUserDto = class DeleteUserDto {
+};
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", Number)
+], DeleteUserDto.prototype, "id", void 0);
+DeleteUserDto = __decorate([
+    graphql_1.InputType()
+], DeleteUserDto);
+exports.DeleteUserDto = DeleteUserDto;
 //# sourceMappingURL=user.input.js.map

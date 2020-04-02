@@ -7,3 +7,10 @@ export default class CreateUserDto {
   @Field()
   readonly firstName: string;
 }
+
+@InputType()
+export class DeleteUserDto {
+  @Field()
+  readonly id: number;
+
+}

@@ -28,6 +28,18 @@ let UserResolver = class UserResolver {
     async getUser(id) {
         return this.repoService.userRepo.findOne(id);
     }
+    async deleteUser(input) {
+        try {
+            const message = await this.repoService.userRepo.findOne(input.id);
+            const copy = Object.assign({}, message);
+            await this.repoService.userRepo.remove(message);
+            return copy;
+        }
+        catch (error) {
+            error.message = ("Id does not exist");
+            return (error);
+        }
+    }
     async createOrLoginUser(input) {
         let user = await this.repoService.userRepo.findOne({
             where: { email: input.email.toLowerCase().trim() },
@@ -55,6 +67,13 @@ __decorate([
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "getUser", null);
+__decorate([
+    graphql_1.Mutation(() => user_entity_1.default),
+    __param(0, graphql_1.Args('data')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_input_1.DeleteUserDto]),
+    __metadata("design:returntype", Promise)
+], UserResolver.prototype, "deleteUser", null);
 __decorate([
     common_1.Post(),
     swagger_1.ApiOperation({ summary: 'Create user' }),

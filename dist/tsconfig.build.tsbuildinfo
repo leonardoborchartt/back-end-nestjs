@@ -3981,7 +3981,7 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/db/models/user.entity.ts": {
-        "version": "24b6cd60d5cac18f35896a8255103d4b39505e321ce7e852da0a9767f1fa10df",
+        "version": "94078f30c07ab47b13cc06227f3121400d56c595f53141f7d6dc5a96a809bead",
         "signature": "9c7ab2872aa9b24b053ff47a3763c1138936baf07a8fb6cb982ee15101fb63a8"
       },
       "../src/repo.service.ts": {
@@ -4005,12 +4005,12 @@
         "signature": "2aa40c430612cb6a0baeea28070ed89e806421cae120739517700bb98f353e80"
       },
       "../src/resolvers/dto/user.input.ts": {
-        "version": "3659bb4af6e4eb71315fb0c63a4cd96e291b8810e7780795716a04e0ec873d87",
-        "signature": "f19b3079024327007d3f82017d9fb540d597dac87cd0943d67dad07bf58fce01"
+        "version": "03918f03491ed440a8a65dcf7a5d0c59a8529b706a3592aa5dc932b791d084c9",
+        "signature": "406c8c22d11088c6dbf7481ddca31000c19514464c20a999a2b15f678b74d79a"
       },
       "../src/resolvers/user.resolver.ts": {
-        "version": "6e90038a52846566a73dc81ccee2391ed6909c6fe0e24df41b2026f5669fc4c1",
-        "signature": "2457517696d984d24015b80e3e372a0a16d5bf1e0d1030e8a47ff3eeaabb7d66"
+        "version": "eb4c3915c61863b24df1f5956734df537220ce1dc600b59d8b7782a9a763a8ac",
+        "signature": "e51b8fbe48a6be7730fb0c61bbb2ef767c0080490bbb9ab4604ef678bde2bcb3"
       },
       "../node_modules/dataloader/index.d.ts": {
         "version": "507050f504a446515a2d9e648fdcf850176a27d748e0c430ad118d09f0ba0124",
@@ -22986,11 +22986,11 @@
       "../node_modules/@nestjs/swagger/index.d.ts",
       "../src/db/models/user.entity.ts",
       "../src/repo.service.ts",
+      "../src/app.controller.ts",
       "../src/app.service.ts",
       "../src/config/orm.ts",
       "../src/repo.module.ts",
       "../src/resolvers/dto/user.input.ts",
-      "../src/resolvers/user.resolver.ts",
       "../node_modules/dataloader/index.d.ts",
       "../src/db/loaders/userloader.ts",
       "../src/db/loaders/index.ts",
@@ -23036,7 +23036,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.controller.ts"
+      "../src/resolvers/user.resolver.ts"
     ]
   },
   "version": "3.8.3"
