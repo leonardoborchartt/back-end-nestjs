@@ -6,8 +6,8 @@ const swagger_1 = require("@nestjs/swagger");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const options = new swagger_1.DocumentBuilder()
-        .setTitle('Cats example')
-        .setDescription('The cats API description')
+        .setTitle('User')
+        .setDescription('The users API description')
         .setVersion('1.0')
         .addTag('users')
         .addBearerAuth()
