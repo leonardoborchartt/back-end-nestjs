@@ -6,15 +6,15 @@ const swagger_1 = require("@nestjs/swagger");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const options = new swagger_1.DocumentBuilder()
-        .setTitle('User')
-        .setDescription('The users API description')
+        .setTitle('Cats example')
+        .setDescription('The cats API description')
         .setVersion('1.0')
         .addTag('users')
         .addBearerAuth()
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, options);
     swagger_1.SwaggerModule.setup('api', app, document);
-    await app.listen(3333);
+    await app.listen(process.env.PORT || 3333);
     console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();

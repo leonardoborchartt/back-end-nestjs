@@ -17,7 +17,6 @@ const repo_service_1 = require("../repo.service");
 const user_entity_1 = require("../db/models/user.entity");
 const user_input_1 = require("./dto/user.input");
 const swagger_1 = require("@nestjs/swagger");
-const common_1 = require("@nestjs/common");
 let UserResolver = class UserResolver {
     constructor(repoService) {
         this.repoService = repoService;
@@ -40,18 +39,21 @@ let UserResolver = class UserResolver {
             return (error);
         }
     }
-    async createOrLoginUser(input) {
-        let user = await this.repoService.userRepo.findOne({
-            where: { email: input.email.toLowerCase().trim() },
+    async createUser(input) {
+        let user = this.repoService.userRepo.create({
+            firstName: input.firstName.toLowerCase(),
+            lastName: input.lastName.toLowerCase(),
+            cityLive: input.cityLive.toLowerCase(),
+            birthDay: input.birthDay.toLowerCase()
         });
-        if (!user) {
-            user = this.repoService.userRepo.create({
-                email: input.email.toLowerCase().trim(),
-                firstName: input.firstName,
-            });
-            await this.repoService.userRepo.save(user);
-        }
+        await this.repoService.userRepo.save(user);
         return user;
+    }
+    async updateNameUser(input) {
+        let oldUser = await this.repoService.userRepo.findOne(input.id);
+        oldUser.firstName = input.firstName;
+        await this.repoService.userRepo.save(oldUser);
+        return oldUser;
     }
 };
 __decorate([
@@ -75,15 +77,19 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "deleteUser", null);
 __decorate([
-    common_1.Post(),
-    swagger_1.ApiOperation({ summary: 'Create user' }),
-    swagger_1.ApiResponse({ status: 201, description: 'created.' }),
     graphql_1.Mutation(() => user_entity_1.default),
     __param(0, graphql_1.Args('data')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_input_1.default]),
     __metadata("design:returntype", Promise)
-], UserResolver.prototype, "createOrLoginUser", null);
+], UserResolver.prototype, "createUser", null);
+__decorate([
+    graphql_1.Mutation(() => user_entity_1.default),
+    __param(0, graphql_1.Args('data')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_input_1.UpdateUserNameDto]),
+    __metadata("design:returntype", Promise)
+], UserResolver.prototype, "updateNameUser", null);
 UserResolver = __decorate([
     swagger_1.ApiTags('users'),
     graphql_1.Resolver(() => user_entity_1.default),

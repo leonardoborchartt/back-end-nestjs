@@ -3,7 +3,6 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -17,15 +16,24 @@ export default class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ApiProperty({ example: 'leonardo@hotmail.com', description: 'The email of the User' })
-  @Field()
-  @Column()
-  email: string;
-
   @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
   @Field()
   @Column()
   firstName: string;
+
+  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
+  @Field() 
+  @Column()
+  lastName: string;
+  
+  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
+  @Field()
+  @Column()
+  cityLive: string;
+  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
+  @Field()
+  @Column()
+  birthDay: string;
 
   @Field()
   @CreateDateColumn({ name: 'created_at' })
@@ -34,5 +42,4 @@ export default class User {
   @Field()
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
-  //22
 }

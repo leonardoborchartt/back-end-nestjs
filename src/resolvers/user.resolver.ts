@@ -1,9 +1,9 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import RepoService from '../repo.service';
 import User from '../db/models/user.entity';
-import CreateUserDto, { DeleteUserDto } from './dto/user.input';
+import CreateUserDto, { DeleteUserDto ,UpdateUserNameDto} from './dto/user.input';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
-import { Post } from '@nestjs/common';
+import { Post, Get } from '@nestjs/common';
 
 
 @ApiTags('users')
@@ -21,15 +21,6 @@ export default class UserResolver {
     return this.repoService.userRepo.findOne(id);
   }
 
-  /*
-  @Mutation(() => User)// é para quando voce quer editar um registro deletar e afins
-  public async deleteUser(@Args('id') id: number): Promise<User> {
-    this.repoService.userRepo.delete(id);
-
-    return null;
-  }
-*/
-
   @Mutation(() => User)
   public async deleteUser(@Args('data') input: DeleteUserDto, ): Promise<User> {
     try {
@@ -43,26 +34,25 @@ export default class UserResolver {
     }
   }
 
-  @Post()
-  @ApiOperation({ summary: 'Create user' })
-  @ApiResponse({ status: 201, description: 'created.' })
-  @Mutation(() => User)// é para quando voce quer editar um registro deletar e afins
-  public async createOrLoginUser(@Args('data') input: CreateUserDto, ): Promise<User> {
-    let user = await this.repoService.userRepo.findOne({
-      where: { email: input.email.toLowerCase().trim() },
+  @Mutation(() => User)
+  public async createUser(@Args('data') input: CreateUserDto, ): Promise<User> {
+    let user = this.repoService.userRepo.create({
+      firstName: input.firstName.toLowerCase(),
+      lastName: input.lastName.toLowerCase(),
+      cityLive: input.cityLive.toLowerCase(),
+      birthDay: input.birthDay.toLowerCase()
     });
-
-    if (!user) {
-      user = this.repoService.userRepo.create({
-        email: input.email.toLowerCase().trim(),
-        firstName: input.firstName,
-
-      });
-
-      await this.repoService.userRepo.save(user);
-    }
-
+    await this.repoService.userRepo.save(user);
     return user;
+  }
+
+  @Mutation(() => User)
+  public async updateNameUser(@Args('data') input: UpdateUserNameDto, ): Promise<User> {
+    let oldUser = await this.repoService.userRepo.findOne(input.id);
+    oldUser.firstName = input.firstName;
+    
+    await this.repoService.userRepo.save(oldUser);  
+    return oldUser;
   }
 
 

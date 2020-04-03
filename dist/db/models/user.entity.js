@@ -21,17 +21,29 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
 __decorate([
-    swagger_1.ApiProperty({ example: 'leonardo@hotmail.com', description: 'The email of the User' }),
-    graphql_1.Field(),
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], User.prototype, "email", void 0);
-__decorate([
     swagger_1.ApiProperty({ example: 'Leonardo', description: 'The first name of the User' }),
     graphql_1.Field(),
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], User.prototype, "firstName", void 0);
+__decorate([
+    swagger_1.ApiProperty({ example: 'Leonardo', description: 'The first name of the User' }),
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], User.prototype, "lastName", void 0);
+__decorate([
+    swagger_1.ApiProperty({ example: 'Leonardo', description: 'The first name of the User' }),
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], User.prototype, "cityLive", void 0);
+__decorate([
+    swagger_1.ApiProperty({ example: 'Leonardo', description: 'The first name of the User' }),
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], User.prototype, "birthDay", void 0);
 __decorate([
     graphql_1.Field(),
     typeorm_1.CreateDateColumn({ name: 'created_at' }),

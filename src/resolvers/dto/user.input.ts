@@ -3,14 +3,27 @@ import { Field, InputType } from '@nestjs/graphql';
 @InputType()
 export default class CreateUserDto {
   @Field()
-  readonly email: string;
-  @Field()
   readonly firstName: string;
+  @Field()
+  readonly lastName: string;
+  @Field()
+  readonly cityLive: string;
+  @Field()
+  readonly birthDay: string; 
+  
 }
 
 @InputType()
 export class DeleteUserDto {
   @Field()
   readonly id: number;
+}
+
+@InputType()
+export class UpdateUserNameDto {
+  @Field()
+  readonly id: number;
+  @Field()
+  readonly firstName: string;
 
 }

@@ -15,11 +15,19 @@ let CreateUserDto = class CreateUserDto {
 __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
-], CreateUserDto.prototype, "email", void 0);
+], CreateUserDto.prototype, "firstName", void 0);
 __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
-], CreateUserDto.prototype, "firstName", void 0);
+], CreateUserDto.prototype, "lastName", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
+], CreateUserDto.prototype, "cityLive", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
+], CreateUserDto.prototype, "birthDay", void 0);
 CreateUserDto = __decorate([
     graphql_1.InputType()
 ], CreateUserDto);
@@ -34,4 +42,18 @@ DeleteUserDto = __decorate([
     graphql_1.InputType()
 ], DeleteUserDto);
 exports.DeleteUserDto = DeleteUserDto;
+let UpdateUserNameDto = class UpdateUserNameDto {
+};
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", Number)
+], UpdateUserNameDto.prototype, "id", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
+], UpdateUserNameDto.prototype, "firstName", void 0);
+UpdateUserNameDto = __decorate([
+    graphql_1.InputType()
+], UpdateUserNameDto);
+exports.UpdateUserNameDto = UpdateUserNameDto;
 //# sourceMappingURL=user.input.js.map

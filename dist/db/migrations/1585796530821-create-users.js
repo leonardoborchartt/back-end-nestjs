@@ -14,17 +14,27 @@ class createUsers1585796530821 {
                     generationStrategy: 'increment',
                 },
                 {
-                    name: 'email',
-                    type: 'varchar',
-                    length: '255',
-                    isUnique: true,
-                    isNullable: false,
-                },
-                {
                     name: 'firstName',
                     type: 'varchar',
                     length: '255',
-                    isUnique: false,
+                    isNullable: false,
+                },
+                {
+                    name: 'lastName',
+                    type: 'varchar',
+                    length: '255',
+                    isNullable: false,
+                },
+                {
+                    name: 'cityLive',
+                    type: 'varchar',
+                    length: '255',
+                    isNullable: false,
+                },
+                {
+                    name: 'birthDay',
+                    type: 'varchar',
+                    length: '255',
                     isNullable: false,
                 },
                 {

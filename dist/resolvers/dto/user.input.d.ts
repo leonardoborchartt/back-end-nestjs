@@ -1,7 +1,13 @@
 export default class CreateUserDto {
-    readonly email: string;
     readonly firstName: string;
+    readonly lastName: string;
+    readonly cityLive: string;
+    readonly birthDay: string;
 }
 export declare class DeleteUserDto {
     readonly id: number;
+}
+export declare class UpdateUserNameDto {
+    readonly id: number;
+    readonly firstName: string;
 }

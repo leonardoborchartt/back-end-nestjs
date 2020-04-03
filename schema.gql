@@ -3,8 +3,10 @@
 # ------------------------------------------------------
 
 input CreateUserDto {
-  email: String!
   firstName: String!
+  lastName: String!
+  cityLive: String!
+  birthDay: String!
 }
 
 """
@@ -18,7 +20,8 @@ input DeleteUserDto {
 
 type Mutation {
   deleteUser(data: DeleteUserDto!): User!
-  createOrLoginUser(data: CreateUserDto!): User!
+  createUser(data: CreateUserDto!): User!
+  updateNameUser(data: UpdateUserNameDto!): User!
 }
 
 type Query {
@@ -26,10 +29,17 @@ type Query {
   getUser(id: Float!): User
 }
 
+input UpdateUserNameDto {
+  id: Float!
+  firstName: String!
+}
+
 type User {
   id: Float!
-  email: String!
   firstName: String!
+  lastName: String!
+  cityLive: String!
+  birthDay: String!
   createdAt: DateTime!
   updatedAt: DateTime!
 }
