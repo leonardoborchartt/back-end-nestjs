@@ -6,34 +6,29 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { ApiProperty } from '@nestjs/swagger';
 
 @ObjectType()
 @Entity({ name: 'users' })
 export default class User {
-  @ApiProperty({ example: '1', description: 'The id of the User' })
   @Field()
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
   @Field()
   @Column()
   firstName: string;
 
-  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
-  @Field() 
+  @Field()
   @Column()
   lastName: string;
-  
-  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
+
   @Field()
   @Column()
   cityLive: string;
-  @ApiProperty({ example: 'Leonardo', description: 'The first name of the User' })
+
   @Field()
   @Column()
-  birthDay: string;
+  birthDay: Date;
 
   @Field()
   @CreateDateColumn({ name: 'created_at' })

@@ -26,7 +26,7 @@ __decorate([
 ], CreateUserDto.prototype, "cityLive", void 0);
 __decorate([
     graphql_1.Field(),
-    __metadata("design:type", String)
+    __metadata("design:type", Date)
 ], CreateUserDto.prototype, "birthDay", void 0);
 CreateUserDto = __decorate([
     graphql_1.InputType()
@@ -52,6 +52,10 @@ __decorate([
     graphql_1.Field(),
     __metadata("design:type", String)
 ], UpdateUserNameDto.prototype, "firstName", void 0);
+__decorate([
+    graphql_1.Field(),
+    __metadata("design:type", String)
+], UpdateUserNameDto.prototype, "lastName", void 0);
 UpdateUserNameDto = __decorate([
     graphql_1.InputType()
 ], UpdateUserNameDto);

@@ -6,7 +6,7 @@ input CreateUserDto {
   firstName: String!
   lastName: String!
   cityLive: String!
-  birthDay: String!
+  birthDay: DateTime!
 }
 
 """
@@ -32,6 +32,7 @@ type Query {
 input UpdateUserNameDto {
   id: Float!
   firstName: String!
+  lastName: String!
 }
 
 type User {
@@ -39,7 +40,7 @@ type User {
   firstName: String!
   lastName: String!
   cityLive: String!
-  birthDay: String!
+  birthDay: DateTime!
   createdAt: DateTime!
   updatedAt: DateTime!
 }

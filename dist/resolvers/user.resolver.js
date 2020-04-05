@@ -25,7 +25,8 @@ let UserResolver = class UserResolver {
         return this.repoService.userRepo.find();
     }
     async getUser(id) {
-        return this.repoService.userRepo.findOne(id);
+        const user = this.repoService.userRepo.findOne(id);
+        return user;
     }
     async deleteUser(input) {
         try {
@@ -40,18 +41,19 @@ let UserResolver = class UserResolver {
         }
     }
     async createUser(input) {
-        let user = this.repoService.userRepo.create({
+        const user = this.repoService.userRepo.create({
             firstName: input.firstName.toLowerCase(),
             lastName: input.lastName.toLowerCase(),
             cityLive: input.cityLive.toLowerCase(),
-            birthDay: input.birthDay.toLowerCase()
+            birthDay: input.birthDay
         });
         await this.repoService.userRepo.save(user);
         return user;
     }
     async updateNameUser(input) {
-        let oldUser = await this.repoService.userRepo.findOne(input.id);
+        const oldUser = await this.repoService.userRepo.findOne(input.id);
         oldUser.firstName = input.firstName;
+        oldUser.lastName = input.lastName;
         await this.repoService.userRepo.save(oldUser);
         return oldUser;
     }

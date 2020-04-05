@@ -3840,6 +3840,34 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
+      "../src/db/models/user.entity.ts": {
+        "version": "07dc2b044574316994dcbc92c7a4237dc35772211f4d88f2237f95b1bfc05776",
+        "signature": "0e2510874232321f8b7304082801c29b913c202f56ca3f3d8846c450b8bde75b"
+      },
+      "../src/repo.service.ts": {
+        "version": "df39a2516c7a6c1801a8c55659514dfcf3b780d4442577575b40d3f2196a0df1",
+        "signature": "7061a4b212e886b85a7afa3a9591592ca662639abd1577cf554ffb5b15904ef5"
+      },
+      "../src/app.controller.ts": {
+        "version": "b5650397e4b5034d3766d3f69b4ba0cfe9de7bc07ea50592648c8a384459cfd8",
+        "signature": "4dcccd8150a092b6094e442cdb77086d8c363b8e6e67ad8f3ed1b01244d01fb8"
+      },
+      "../src/app.service.ts": {
+        "version": "5d4242d50092a353e5ab1f06663a89dbc714c7d9d70072ea03c83c5b14750f05",
+        "signature": "d8f4cb0109c1b399d657807fd6af504d74a9300325e0fc915abdbf658b464a97"
+      },
+      "../src/config/orm.ts": {
+        "version": "8b40624b5b78ff0fdea891403d4b534d4d15fea4fe33a83ecaa32d2c6164c1fb",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "../src/repo.module.ts": {
+        "version": "175bd3293947e0572e1586b28ba475695c5e32ecb1ba2da6e45e2cd46e93edb9",
+        "signature": "2aa40c430612cb6a0baeea28070ed89e806421cae120739517700bb98f353e80"
+      },
+      "../src/resolvers/dto/user.input.ts": {
+        "version": "b5b056874c4f1829bd348e5517ba828638020112792e9274a809e4e7df86ff28",
+        "signature": "50015cfc28a2ca0863d388af85ab8e941c609c1236ca57e52702527e2a783361"
+      },
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
         "version": "6ecc423e71318bafbd230e6059e082c377170dfc7e02fccfa600586f8604d452",
         "signature": "6ecc423e71318bafbd230e6059e082c377170dfc7e02fccfa600586f8604d452"
@@ -3980,36 +4008,8 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
-      "../src/db/models/user.entity.ts": {
-        "version": "27f5a24a6607f1172863de377826ed6ff195b8f1cb9ca75abdb9da6055792f5c",
-        "signature": "dc7720ccf2e674a94377534980af722dd680d1ecf11fd7b8b215c39b71fb1372"
-      },
-      "../src/repo.service.ts": {
-        "version": "df39a2516c7a6c1801a8c55659514dfcf3b780d4442577575b40d3f2196a0df1",
-        "signature": "7061a4b212e886b85a7afa3a9591592ca662639abd1577cf554ffb5b15904ef5"
-      },
-      "../src/app.controller.ts": {
-        "version": "b5650397e4b5034d3766d3f69b4ba0cfe9de7bc07ea50592648c8a384459cfd8",
-        "signature": "4dcccd8150a092b6094e442cdb77086d8c363b8e6e67ad8f3ed1b01244d01fb8"
-      },
-      "../src/app.service.ts": {
-        "version": "5d4242d50092a353e5ab1f06663a89dbc714c7d9d70072ea03c83c5b14750f05",
-        "signature": "d8f4cb0109c1b399d657807fd6af504d74a9300325e0fc915abdbf658b464a97"
-      },
-      "../src/config/orm.ts": {
-        "version": "8b40624b5b78ff0fdea891403d4b534d4d15fea4fe33a83ecaa32d2c6164c1fb",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/repo.module.ts": {
-        "version": "175bd3293947e0572e1586b28ba475695c5e32ecb1ba2da6e45e2cd46e93edb9",
-        "signature": "2aa40c430612cb6a0baeea28070ed89e806421cae120739517700bb98f353e80"
-      },
-      "../src/resolvers/dto/user.input.ts": {
-        "version": "cdab7dd4fcfe8b0d4c25fe374e3657911fbefc870b192ce8908f5604e449086d",
-        "signature": "b62ac63cf638d5eaa87af70c132abeea77b90ab288196a51343c1039239bc411"
-      },
       "../src/resolvers/user.resolver.ts": {
-        "version": "02843794556ca03a65e45f1756f6449cfe42532acbb051ad2ecd7c9922d2f74d",
+        "version": "7ece776af70b7359c369a5452ce26e35f1f804aa40a979d478b2293397e61dfd",
         "signature": "10a8f223d29a64d785a4a4e3481e06356ae51cd86f3a7d9e2c1244384f5cbd19"
       },
       "../node_modules/dataloader/index.d.ts": {
@@ -12477,6 +12477,64 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/db/models/user.entity.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/repo.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/db/models/user.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/app.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/repo.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/app.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/config/orm.ts": [
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/repo.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/repo.service.ts",
+        "../src/db/models/user.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/resolvers/dto/user.input.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -12744,72 +12802,12 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/db/models/user.entity.ts": [
-        "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@nestjs/swagger/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/repo.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/db/models/user.entity.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/app.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/repo.service.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/app.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/config/orm.ts": [
-        "../node_modules/@types/node/path.d.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/repo.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/repo.service.ts",
-        "../src/db/models/user.entity.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/resolvers/dto/user.input.ts": [
-        "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../src/resolvers/user.resolver.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../src/repo.service.ts",
         "../src/db/models/user.entity.ts",
         "../src/resolvers/dto/user.input.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
-        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -21412,6 +21410,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/repo.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/models/user.entity.ts"
+      ],
+      "../src/app.controller.ts": [
+        "../src/repo.service.ts"
+      ],
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -21679,13 +21684,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/repo.service.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/db/models/user.entity.ts"
-      ],
-      "../src/app.controller.ts": [
-        "../src/repo.service.ts"
-      ],
       "../src/resolvers/user.resolver.ts": [
         "../src/repo.service.ts",
         "../src/db/models/user.entity.ts",
@@ -21698,8 +21696,8 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/db/loaders/userloader.ts": [
-        "../node_modules/dataloader/index.d.ts",
-        "../src/db/models/user.entity.ts"
+        "../src/db/models/user.entity.ts",
+        "../node_modules/dataloader/index.d.ts"
       ],
       "../src/db/loaders/index.ts": [
         "../src/db/models/user.entity.ts",
@@ -22949,6 +22947,9 @@
       "../node_modules/@nestjs/graphql/dist/type-factories/index.d.ts",
       "../node_modules/@nestjs/graphql/dist/index.d.ts",
       "../node_modules/@nestjs/graphql/index.d.ts",
+      "../src/app.service.ts",
+      "../src/config/orm.ts",
+      "../src/resolvers/dto/user.input.ts",
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts",
       "../node_modules/@nestjs/swagger/dist/decorators/api-bearer.decorator.d.ts",
       "../node_modules/@nestjs/swagger/dist/interfaces/open-api-spec.interface.d.ts",
@@ -22984,18 +22985,7 @@
       "../node_modules/@nestjs/swagger/dist/utils/index.d.ts",
       "../node_modules/@nestjs/swagger/dist/index.d.ts",
       "../node_modules/@nestjs/swagger/index.d.ts",
-      "../src/db/models/user.entity.ts",
-      "../src/repo.service.ts",
-      "../src/app.controller.ts",
-      "../src/app.service.ts",
-      "../src/config/orm.ts",
-      "../src/repo.module.ts",
-      "../src/resolvers/dto/user.input.ts",
       "../node_modules/dataloader/index.d.ts",
-      "../src/db/loaders/userloader.ts",
-      "../src/db/loaders/index.ts",
-      "../src/app.module.ts",
-      "../src/main.ts",
       "../src/db/migrations/1585796530821-create-users.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
@@ -23036,7 +23026,15 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/resolvers/user.resolver.ts"
+      "../src/db/models/user.entity.ts",
+      "../src/db/loaders/userloader.ts",
+      "../src/db/loaders/index.ts",
+      "../src/app.module.ts",
+      "../src/resolvers/user.resolver.ts",
+      "../src/repo.module.ts",
+      "../src/repo.service.ts",
+      "../src/app.controller.ts",
+      "../src/main.ts"
     ]
   },
   "version": "3.8.3"

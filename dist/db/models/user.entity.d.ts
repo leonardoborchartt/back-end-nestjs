@@ -3,7 +3,7 @@ export default class User {
     firstName: string;
     lastName: string;
     cityLive: string;
-    birthDay: string;
+    birthDay: Date;
     createdAt: Date;
     updatedAt: Date;
 }

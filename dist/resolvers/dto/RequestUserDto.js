@@ -10,47 +10,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const graphql_1 = require("@nestjs/graphql");
-const typeorm_1 = require("typeorm");
-let User = class User {
+const output_type_factory_1 = require("@nestjs/graphql/dist/schema-builder/factories/output-type.factory");
+let RequestUserDto = class RequestUserDto {
 };
 __decorate([
     graphql_1.Field(),
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
-], User.prototype, "id", void 0);
-__decorate([
-    graphql_1.Field(),
-    typeorm_1.Column(),
     __metadata("design:type", String)
-], User.prototype, "firstName", void 0);
+], RequestUserDto.prototype, "firstName", void 0);
 __decorate([
     graphql_1.Field(),
-    typeorm_1.Column(),
     __metadata("design:type", String)
-], User.prototype, "lastName", void 0);
+], RequestUserDto.prototype, "lastName", void 0);
 __decorate([
     graphql_1.Field(),
-    typeorm_1.Column(),
     __metadata("design:type", String)
-], User.prototype, "cityLive", void 0);
+], RequestUserDto.prototype, "cityLive", void 0);
 __decorate([
     graphql_1.Field(),
-    typeorm_1.Column(),
-    __metadata("design:type", Date)
-], User.prototype, "birthDay", void 0);
+    __metadata("design:type", String)
+], RequestUserDto.prototype, "birthDay", void 0);
 __decorate([
     graphql_1.Field(),
-    typeorm_1.CreateDateColumn({ name: 'created_at' }),
-    __metadata("design:type", Date)
-], User.prototype, "createdAt", void 0);
-__decorate([
-    graphql_1.Field(),
-    typeorm_1.UpdateDateColumn({ name: 'updated_at' }),
-    __metadata("design:type", Date)
-], User.prototype, "updatedAt", void 0);
-User = __decorate([
-    graphql_1.ObjectType(),
-    typeorm_1.Entity({ name: 'users' })
-], User);
-exports.default = User;
-//# sourceMappingURL=user.entity.js.map
+    __metadata("design:type", String)
+], RequestUserDto.prototype, "age", void 0);
+RequestUserDto = __decorate([
+    output_type_factory_1.OutputTypeFactory
+], RequestUserDto);
+exports.default = RequestUserDto;
+//# sourceMappingURL=RequestUserDto.js.map

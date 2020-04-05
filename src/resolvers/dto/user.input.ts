@@ -9,10 +9,9 @@ export default class CreateUserDto {
   @Field()
   readonly cityLive: string;
   @Field()
-  readonly birthDay: string; 
-  
-}
+  readonly birthDay: Date;
 
+}
 @InputType()
 export class DeleteUserDto {
   @Field()
@@ -25,5 +24,8 @@ export class UpdateUserNameDto {
   readonly id: number;
   @Field()
   readonly firstName: string;
+  @Field()
+  readonly lastName: string;
+  
 
 }

@@ -1,9 +1,9 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import RepoService from '../repo.service';
 import User from '../db/models/user.entity';
-import CreateUserDto, { DeleteUserDto ,UpdateUserNameDto} from './dto/user.input';
+import CreateUserDto, { DeleteUserDto, UpdateUserNameDto } from './dto/user.input';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
-import { Post, Get } from '@nestjs/common';
+
 
 
 @ApiTags('users')
@@ -18,7 +18,9 @@ export default class UserResolver {
 
   @Query(() => User, { nullable: true })
   public async getUser(@Args('id') id: number): Promise<User> {
-    return this.repoService.userRepo.findOne(id);
+
+    const user = this.repoService.userRepo.findOne(id);
+    return user;
   }
 
   @Mutation(() => User)
@@ -36,11 +38,11 @@ export default class UserResolver {
 
   @Mutation(() => User)
   public async createUser(@Args('data') input: CreateUserDto, ): Promise<User> {
-    let user = this.repoService.userRepo.create({
+    const user = this.repoService.userRepo.create({
       firstName: input.firstName.toLowerCase(),
       lastName: input.lastName.toLowerCase(),
       cityLive: input.cityLive.toLowerCase(),
-      birthDay: input.birthDay.toLowerCase()
+      birthDay: input.birthDay
     });
     await this.repoService.userRepo.save(user);
     return user;
@@ -48,17 +50,12 @@ export default class UserResolver {
 
   @Mutation(() => User)
   public async updateNameUser(@Args('data') input: UpdateUserNameDto, ): Promise<User> {
-    let oldUser = await this.repoService.userRepo.findOne(input.id);
+    const oldUser = await this.repoService.userRepo.findOne(input.id);
     oldUser.firstName = input.firstName;
-    
-    await this.repoService.userRepo.save(oldUser);  
+    oldUser.lastName = input.lastName;
+    await this.repoService.userRepo.save(oldUser);
     return oldUser;
   }
-
-
-
-
-
 }
 
 
