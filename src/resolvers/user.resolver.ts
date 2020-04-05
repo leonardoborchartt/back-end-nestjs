@@ -2,7 +2,7 @@ import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import RepoService from '../repo.service';
 import User from '../db/models/user.entity';
 import CreateUserDto, { DeleteUserDto, UpdateUserNameDto } from './dto/user.input';
-import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiTags} from '@nestjs/swagger';
 
 
 
